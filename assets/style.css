@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2rem;
+    font-family: "Inter", sans-serif;
+    background-color: #E5E5E5;
+}
+
+main {
+    background-color: #F3F5FC;
+    display: flex;
+    margin: auto;
+    width: 80%;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+#containText {
+    width: 70%;
+    padding: 1rem;
+}
+
+.encryptorDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.inputText {
+    color: #0A3871;
+    width: 100%;
+    height: 40vh;
+    resize: none;
+    font-size: 1rem;
+    background-color: #F3F5FC;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+textarea::placeholder {
+    color: #0A3871;
+}
+
+.infoDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    gap: 0.5rem;
+}
+
+.buttonsDiv {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    padding: 1rem;
+    font-family: "Inter", sans-serif;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 200ms;
+    width: 100%;
+}
+
+.buttonEncrypt {
+    background-color: #0A3871;
+    color: #D8DFE8;
+}
+
+.buttonEncrypt:hover {
+    scale: 1.05;
+}
+
+.buttonDecrypt {
+    background-color: #D8DFE8;
+    color: #0A3871;
+}
+
+button:hover {
+    scale: 1.05;
+}
+
+#containResponse {
+    width: 30%;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+#empty {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#empty img {
+    width: 90%;
+}
+
+#response {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    display: none;
+}
+
+#response div {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+#iconClose {
+    width: 2rem;
+    cursor: pointer;
+}
+
+#response textarea {
+    pointer-events: none;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    main{
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+    
+    #containText, #containResponse {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .encryptorDiv {
+        margin: 1rem 0;
+        gap: 1rem;
+    }
+
+    .inputText {
+        height: 30vh;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .inputText {
+        height: 25vh;
+        font-size: 0.875rem;
+    }
+
+    button {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    #iconClose {
+        width: 1.5rem;
+    }
+}
