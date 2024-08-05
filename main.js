@@ -6,12 +6,10 @@ const empty = document.getElementById('empty');
 const response = document.getElementById('response');
 const textOutput = document.getElementById('inResponse');
 
-const close = document.getElementById('iconClose').addEventListener('click', () => toggleResponse(false));
-const copy = document.getElementById('copy').addEventListener('click', () => {
+const copy = () => {
     textOutput.select();
     document.execCommand('copy');
-});
-
+}
 
 function toEncrypt(text) {
     let result = text.replace(/e/g, 'enter')
